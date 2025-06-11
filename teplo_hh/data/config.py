@@ -1,0 +1,6 @@
+BOT_TOKEN = "7217247813:AAGi33UDt18_plKjUpmSb5v90J3TXtcLXtE"
+
+
+admin_id = [
+    997072773
+]
