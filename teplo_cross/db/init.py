@@ -1,6 +1,6 @@
 from tortoise import Tortoise
 
-db = Tortoise(dom=0, id=0)
+db = Tortoise()
 
 
 async def init():
