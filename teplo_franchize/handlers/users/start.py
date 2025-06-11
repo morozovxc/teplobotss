@@ -16,7 +16,6 @@ async def start(m: types.Message):
         await Users.create(tg_id=m.from_user.id)
     await m.answer('Открой свой табачный магазин по франшизе TEPLO и зарабатывай от 150.000 рублей в месяц!',
                    reply_markup=StartIKB.ikb)
-    await m.answer("Бот создан командой @dDevLabs")
 
 
 @dp.callback_query_handler(text="write_data")
