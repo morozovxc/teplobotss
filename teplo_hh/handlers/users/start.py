@@ -128,6 +128,7 @@ async def education(m: types.Message, state: FSMContext):
 
 @dp.message_handler(state=QuestionnaireState.russian_citizenship)
 async def russian_citizenship(m: types.Message, state: FSMContext):
+    print(m.text)
     await state.update_data(russian_citizenship=m.text)
     c_d = await state.get_data()
 
