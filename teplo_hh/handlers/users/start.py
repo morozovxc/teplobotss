@@ -128,7 +128,7 @@ async def education(m: types.Message, state: FSMContext):
 
 @dp.message_handler(state=QuestionnaireState.russian_citizenship)
 async def russian_citizenship(m: types.Message, state: FSMContext):
-    print(m.text)
+    #print(m.text)
     await state.update_data(russian_citizenship=m.text)
     c_d = await state.get_data()
 
@@ -143,7 +143,6 @@ async def russian_citizenship(m: types.Message, state: FSMContext):
               f"8. Образование: {c_d['education']}\n" \
               f"9. Гражданство РФ: {c_d['russian_citizenship']}"
 
-    await state.finish()
     await dp.bot.send_message(875572761, message)
     await m.answer("🎯Ваша анкета отправлена HR-менеджеру!\n\n"
                    "🔻Анкеты обрабатываются ежедневно с 10:00 до 19:00 по местному времени.\n\n"
@@ -164,6 +163,7 @@ async def russian_citizenship(m: types.Message, state: FSMContext):
     await UserFlag.filter(tg_id=m.from_user.id).delete()
     await TimeUsers.create(tg_id=m.from_user.id,
                            time_int=time.time())
+    await state.finish()
 
 
 @dp.callback_query_handler(text="response:yes")
