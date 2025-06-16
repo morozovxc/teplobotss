@@ -6,8 +6,8 @@ from keyboards import Cross, button_change
 from loader import dp
 from state import CreatePost
 
-#id_tg = -1001478749732
-id_tg_user = -1001478749732#-1002896286690
+#-1001478749732
+id_tg_user = -1002896286690
 change_id = 0
 
 
