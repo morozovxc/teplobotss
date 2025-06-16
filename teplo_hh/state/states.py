@@ -10,3 +10,5 @@ class QuestionnaireState(StatesGroup):
     criminal = State()
     education = State()
     russian_citizenship = State()
+    comment = State()
+    comment_save = State()

@@ -24,6 +24,8 @@ class UsersData(Model):
     criminal = fields.CharField(max_length=4096)
     education = fields.CharField(max_length=4096)
     russian_citizenship = fields.CharField(max_length=4096)
+    comment = fields.CharField(max_length=4096)
+    comment_save = fields.CharField(max_length=4096)
 
 
 class UserFlag(Model):
