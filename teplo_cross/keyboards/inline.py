@@ -6,11 +6,11 @@ class Start:
     async def start_ikb(m_id: int):
         btn1 = InlineKeyboardButton(text="🛍️ Уточнить наличие", callback_data=f"check_or_buy:{m_id}")
         btn2 = InlineKeyboardButton(text="📝 Трудоустройство", url="https://t.me/TEPLOHRBOT")
-        btn3 = InlineKeyboardButton(text="Бонусная программа💳", url="https://t.me/TEPLOFRANCHISEBOT")
+        btn3 = InlineKeyboardButton(text="💳Бонусная программа", url="https://t.me/TEPLOSTORESBOT")
         btn4 = InlineKeyboardButton(text="🤝🏼 Сотрудничество", callback_data=f"work_relation:{m_id}")
         btn5 = InlineKeyboardButton(text="🏦 Купить франшизу", callback_data=f"go_to_FRANCHISE:{m_id}")
         btn6 = InlineKeyboardButton(text="💡 Узнать соц.сети", callback_data=f"our_soc_web:{m_id}")
-        ikb = InlineKeyboardMarkup(1).add(btn1, btn2, btn4, btn5, btn6)
+        ikb = InlineKeyboardMarkup(1).add(btn1, btn2, btn3, btn4, btn5, btn6)
         return ikb
 
 class FRANCHISE:
